@@ -187,9 +187,9 @@ const petsData = [
 ];
 
 function findPet(AnimalID) {
+  console.log(AnimalID);
   for (let i = 0; i < petsData.length; i++) {
-    if ((petsData[i].AnimalID = AnimalID)) {
-      console.log("bing bong");
+    if (petsData[i].AnimalID === AnimalID) {
       return petsData[i];
     }
   }

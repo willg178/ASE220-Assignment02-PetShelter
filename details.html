@@ -9,9 +9,18 @@
     <script src="script.js"></script>
     <script>
       const urlParams = new URLSearchParams(window.location.search);
-      console.log("bing");
       var pet = findPet(urlParams.get("id"));
       console.log(pet);
+      //   var details = document.createElement("div");
+      //   details.innerHTML = `
+      //   <h2>${pet.Name}</h2>
+      //   `;
+      document.write(`
+    <h1>${pet.Name}</h1>
+    <h2>${pet.Age} year old ${pet.Breed}</h2>
+        <p>${pet.Biography}</p>
+        <img style="border-radius: 8px, " src="${pet.ImageUrl}" alt="not found">
+    `);
     </script>
   </body>
 </html>
