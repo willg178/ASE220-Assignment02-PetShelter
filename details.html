@@ -6,21 +6,25 @@
     <title>Document</title>
   </head>
   <body>
+    <a href="main.html" class="btn btn-primary">Back to all pets</a>
     <script src="script.js"></script>
     <script>
       const urlParams = new URLSearchParams(window.location.search);
       var pet = findPet(urlParams.get("id"));
       console.log(pet);
-      //   var details = document.createElement("div");
-      //   details.innerHTML = `
-      //   <h2>${pet.Name}</h2>
-      //   `;
       document.write(`
-    <h1>${pet.Name}</h1>
-    <h2>${pet.Age} year old ${pet.Breed}</h2>
-        <p>${pet.Biography}</p>
-        <img style="border-radius: 8px, " src="${pet.ImageUrl}" alt="not found">
-    `);
+    <div id="container" style="display: flex;">
+        <div id="text-container" style="width: 50%;">
+            <h1>${pet.Name}</h1>
+            <h2>${pet.Age} year old ${pet.Breed}</h2>
+            <p>${pet.Biography}</p>
+        </div>
+        <div id="image-container" style="margin-left: auto; width: 50%; margin-top:100px">
+            <img style="width: 100%;" src="${pet.ImageUrl}" alt="not found">
+        </div>
+    </div>
+`);
     </script>
   </body>
+  <div></div>
 </html>

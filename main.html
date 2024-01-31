@@ -29,7 +29,7 @@
             <div class='card-body'>
               <h5 class='card-title'>${pet.Name}</h5>
               <p class='card-text'>Age: ${pet.Age}     Breed: ${pet.Breed}</p>
-              <a href='details.html?id=${pet.AnimalID}' class='btn btn-primary'>Go somewhere</a>
+              <a href='details.html?id=${pet.AnimalID}' class='btn btn-primary'>${pet.Name}'s Details</a>
             </div>`;
         cardContainer.appendChild(card);
       }
