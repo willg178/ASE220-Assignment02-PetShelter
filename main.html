@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Shelter</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="row" id="cardContainer"></div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      var cardContainer = document.getElementById('cardContainer')
+      for (pet of petsData) {
+        console.log("test");
+        var card = document.createElement("div");
+        card.className = "col-md-4 mb-4";
+        card.innerHTML = `
+          <div class='card' style='width: 18rem;'>
+            <img src='${pet.ImageUrl}' class='card-img-top' alt=''>
+            <div class='card-body'>
+              <h5 class='card-title'>${pet.Name}</h5>
+              <p class='card-text'>Age: ${pet.Age}     Breed: ${pet.Breed}</p>
+              <a href='#' class='btn btn-primary'>Go somewhere</a>
+            </div>`;
+        cardContainer.appendChild(card);
+      }
+    </script>
+    
+    </div>
+  </body>
+</html>
