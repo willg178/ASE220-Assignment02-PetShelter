@@ -185,3 +185,12 @@ const petsData = [
       "Sophie is a young Ragdoll cat with a soft seal point coat and mesmerizing blue eyes. She was found as a kitten and raised in a foster home. Sophie is incredibly affectionate, often seeking out laps to curl up in. She's playful and enjoys interactive toys, but she's also content to relax and watch the world go by. Sophie gets along well with other pets and would be an excellent addition to a loving family or individual looking for a gentle and loving companion.",
   },
 ];
+
+function findPet(AnimalID) {
+  for (let i = 0; i < petsData.length; i++) {
+    if ((petsData[i].AnimalID = AnimalID)) {
+      console.log("bing bong");
+      return petsData[i];
+    }
+  }
+}
